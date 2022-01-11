@@ -21,13 +21,13 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
   displayName: 'Use PHP version $(phpVersion)'
-  
+
 - script: composer install --no-interaction --dry-run
   displayName: 'composer install'
 
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '/home/vsts/work/1/s'
     ArtifactName: 'drop'
     publishLocation: 'Container'
