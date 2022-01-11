@@ -24,9 +24,10 @@ steps:
 
 - script: composer install --no-interaction --dry-run
   displayName: 'composer install'
-  
+
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/s'
     ArtifactName: 'drop'
     publishLocation: 'Container'
