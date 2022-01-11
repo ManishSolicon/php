@@ -21,8 +21,7 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
   displayName: 'Use PHP version $(phpVersion)'
-  inputs:
-    workingDirectory: '$(Build.ArtifactStagingDirectory)'
+  
 - script: composer install --no-interaction --dry-run
   displayName: 'composer install'
 
